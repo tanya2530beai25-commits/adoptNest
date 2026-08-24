@@ -1,3 +1,4 @@
+"homepage": "https://tanya2530beai25-commits.github.io/adoptNest",
 {
   "name": "animal-rescue-portal",
   "private": true,
@@ -8,6 +9,8 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.8",
