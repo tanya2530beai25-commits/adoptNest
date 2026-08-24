@@ -1,0 +1,893 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f9f6;
+}
+
+
+.app {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header {
+    background-color: #3f704d;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo span {
+    font-size: 30px;
+}
+
+
+.logo h1 {
+    font-size: 28px;
+}
+
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+
+nav button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+nav button:hover,
+nav button.active {
+    background-color: white;
+    color: #3f704d;
+}
+
+
+/* =========================
+   HOME HERO
+========================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.72),
+            rgba(255, 255, 255, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 700px;
+    padding: 40px;
+}
+
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #315b3d;
+}
+
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+.hero-button {
+    background-color: #3f704d;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 17px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+.hero-button:hover {
+    background-color: #2e5439;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-section {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+
+.welcome-section h2 {
+    font-size: 32px;
+    color: #3f704d;
+    margin-bottom: 15px;
+}
+
+
+.welcome-section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* =========================
+   PAGE BANNER
+========================= */
+
+.page-banner {
+    text-align: center;
+    padding: 70px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.page-banner h2 {
+    font-size: 38px;
+    color: #315b3d;
+    margin-bottom: 12px;
+}
+
+
+.page-banner p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   ANIMALS
+========================= */
+
+.animals-section {
+    padding: 60px 8%;
+}
+
+
+.animal-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+/* Animal Card */
+
+.animal-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s;
+}
+
+
+.animal-card:hover {
+    transform: translateY(-7px);
+}
+
+
+.animal-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 22px;
+}
+
+
+.card-content h3 {
+    font-size: 25px;
+    color: #3f704d;
+    margin-bottom: 12px;
+}
+
+
+.card-content p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+.card-content .description {
+    margin-top: 14px;
+    color: #555;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-page {
+    min-height: 600px;
+    padding: 70px 10%;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.about-page h2 {
+    font-size: 40px;
+    color: #315b3d;
+    margin-bottom: 25px;
+}
+
+
+.about-page > p {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+.about-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+
+.about-boxes div {
+    width: 230px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.about-boxes h3 {
+    color: #3f704d;
+    margin-bottom: 12px;
+}
+
+
+.about-boxes p {
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #f0f0f0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.footer-container {
+    background-color: rgba(245, 245, 245, 0.94);
+
+    padding: 55px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1.3fr;
+
+    gap: 50px;
+}
+
+
+.footer-section h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+
+.footer-section p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+
+.footer-section button {
+    display: block;
+
+    background: transparent;
+    border: none;
+
+    padding: 5px 0;
+
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+
+.footer-section button:hover {
+    color: #3f704d;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f9f6;
+}
+
+
+.app {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header {
+    background-color: #3f704d;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo span {
+    font-size: 30px;
+}
+
+
+.logo h1 {
+    font-size: 28px;
+}
+
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+
+nav button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+nav button:hover,
+nav button.active {
+    background-color: white;
+    color: #3f704d;
+}
+
+
+/* =========================
+   HOME HERO
+========================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.72),
+            rgba(255, 255, 255, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 700px;
+    padding: 40px;
+}
+
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #315b3d;
+}
+
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+.hero-button {
+    background-color: #3f704d;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 17px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+.hero-button:hover {
+    background-color: #2e5439;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-section {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+
+.welcome-section h2 {
+    font-size: 32px;
+    color: #3f704d;
+    margin-bottom: 15px;
+}
+
+
+.welcome-section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* =========================
+   PAGE BANNER
+========================= */
+
+.page-banner {
+    text-align: center;
+    padding: 70px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.page-banner h2 {
+    font-size: 38px;
+    color: #315b3d;
+    margin-bottom: 12px;
+}
+
+
+.page-banner p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   ANIMALS
+========================= */
+
+.animals-section {
+    padding: 60px 8%;
+}
+
+
+.animal-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+/* Animal Card */
+
+.animal-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s;
+}
+
+
+.animal-card:hover {
+    transform: translateY(-7px);
+}
+
+
+.animal-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 22px;
+}
+
+
+.card-content h3 {
+    font-size: 25px;
+    color: #3f704d;
+    margin-bottom: 12px;
+}
+
+
+.card-content p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+.card-content .description {
+    margin-top: 14px;
+    color: #555;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-page {
+    min-height: 600px;
+    padding: 70px 10%;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.about-page h2 {
+    font-size: 40px;
+    color: #315b3d;
+    margin-bottom: 25px;
+}
+
+
+.about-page > p {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+.about-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+
+.about-boxes div {
+    width: 230px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.about-boxes h3 {
+    color: #3f704d;
+    margin-bottom: 12px;
+}
+
+
+.about-boxes p {
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+   TASKBAR-LIKE DARK COLOUR
+========================= */
+
+footer {
+    background-color:#3f704d;
+    color: white;
+}
+
+
+.footer-container {
+    background-color: #3f704d;
+
+    padding: 55px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1.3fr;
+
+    gap: 50px;
+}
+
+
+.footer-section h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.footer-section p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #d6d6d6;
+}
+
+
+.footer-section button {
+    display: block;
+
+    background: transparent;
+    border: none;
+
+    padding: 5px 0;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    color: #d6d6d6;
+}
+
+
+.footer-section button:hover {
+    color: #9b87ed;
+}
+
+
+.social-title {
+    margin-top: 25px;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+
+.social-icons span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: #806bc9;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.social-icons span:hover {
+    transform: scale(1.1);
+}
+
+
+.footer-bottom {
+    background-color: #202020;
+    text-align: center;
+    padding: 18px;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+    color: #cccccc;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    nav button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+
+    .hero {
+        min-height: 450px;
+    }
+
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+
+    .hero p {
+        font-size: 17px;
+    }
+
+
+    .animal-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .animal-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+
+    .social-icons {
+        justify-content: center;
+    }
+
+}
