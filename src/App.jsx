@@ -80,6 +80,75 @@ function AnimalCard(props) {
 }
 
 
+// Login Component
+function Login({ changePage }) {
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+    function handleSubmit(e) {
+        e.preventDefault(); // stop page reload
+
+        if (username === "" || password === "") {
+            setError("Please fill in both fields.");
+            return;
+        }
+
+        // Simple demo check (replace with real auth later)
+        if (username === "admin" && password === "1234") {
+            setError("");
+            alert("Login successful! Welcome, " + username);
+            changePage("home");
+        } else {
+            setError("Invalid username or password.");
+        }
+    }
+
+    return (
+        <main className="login-page">
+
+            <section className="login-box">
+
+                <h2>Login to adoptNest 🐾</h2>
+
+                <form onSubmit={handleSubmit}>
+
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Enter your username"
+                    />
+
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Enter your password"
+                    />
+
+                    {error && <p className="login-error">{error}</p>}
+
+                    <button type="submit" className="login-button">
+                        Login
+                    </button>
+
+                    <p className="login-hint">
+                        Demo login — username: <strong>admin</strong>, password: <strong>1234</strong>
+                    </p>
+
+                </form>
+
+            </section>
+
+        </main>
+    );
+}
+
+
 // Footer Component
 function Footer({ changePage }) {
 
@@ -121,6 +190,10 @@ function Footer({ changePage }) {
 
                     <button onClick={() => changePage("about")}>
                         About Us
+                    </button>
+
+                    <button onClick={() => changePage("login")}>
+                        Login
                     </button>
 
                 </div>
@@ -235,6 +308,13 @@ function App() {
                         onClick={() => setCurrentPage("about")}
                     >
                         About Us
+                    </button>
+
+                    <button
+                        className={currentPage === "login" ? "active" : ""}
+                        onClick={() => setCurrentPage("login")}
+                    >
+                        Login
                     </button>
 
                 </nav>
@@ -391,6 +471,13 @@ function App() {
 
                 </main>
 
+            )}
+
+
+            {/* LOGIN PAGE */}
+
+            {currentPage === "login" && (
+                <Login changePage={setCurrentPage} />
             )}
 
 
